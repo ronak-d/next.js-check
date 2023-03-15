@@ -3,7 +3,7 @@ import React from "react";
 const Pokemon = () => {
   return (
     <>
-      <h1>Pokemon</h1>
+      <h1>Pokemon page</h1>
     </>
   );
 };
