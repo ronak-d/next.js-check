@@ -9,7 +9,7 @@ const Pokemon = ({ pokemons }) => {
   // console.log(pokemons);
   return (
     <>
-      <SearchComp />
+      {/* <SearchComp /> */}
       <TableComp pokemons={pokemons} />
     </>
   );
