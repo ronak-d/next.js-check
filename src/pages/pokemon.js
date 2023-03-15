@@ -6,14 +6,11 @@ import axios from "axios";
 import index from ".";
 
 const Pokemon = ({ pokemons }) => {
-  console.log(pokemons);
+  // console.log(pokemons);
   return (
     <>
-      <div>
-        {pokemons.results?.map((e) => (
-          <h3>{e.name}</h3>
-        ))}
-      </div>
+      <SearchComp />
+      <TableComp pokemons={pokemons} />
     </>
   );
 };
