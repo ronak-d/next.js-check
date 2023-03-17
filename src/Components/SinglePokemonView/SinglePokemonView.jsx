@@ -5,7 +5,7 @@ const SinglePokemonView = ({ SinglepokemonData }) => {
 
   return (
     <>
-      <div class=" flex sm:flex-col lg:flex-row border-solid border-2 border-yellow-200">
+      <div class="sm:flex sm:flex-col lg:flex-row border-solid border-2 border-yellow-200">
         {/* left */}
         <div class="flex-1 p-4 border-solid border-2 border-black-200">
           <div class="text-2xl font-extrabold">
@@ -48,7 +48,7 @@ const SinglePokemonView = ({ SinglepokemonData }) => {
             {/* stats */}
             <div class="stats">
               <div class="text-2xl font-extrabold">Stats</div>
-              <div class="flex sm:flex-col md:flex-col">
+              <div class="sm:flex-col md:flex-col">
                 {SinglepokemonData.stats.map((e, index) => {
                   {
                     console.log(e.base_stat);
