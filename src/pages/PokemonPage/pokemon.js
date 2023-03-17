@@ -3,13 +3,13 @@ import SearchComp from "@/Components/Searchbar/SearchComp";
 import TableComp from "@/Components/Table/TableComp";
 import React, { useState } from "react";
 import axios from "axios";
-import index from ".";
+import index from "..";
 
 const Pokemon = ({ pokemons }) => {
   // console.log(pokemons);
   return (
     <>
-      {/* <SearchComp /> */}
+      <SearchComp />
       <TableComp pokemons={pokemons} />
     </>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import Pokemon from "./pokemon";
+import Pokemon from "./PokemonPage/pokemon";
 
 const index = () => {
   return (

@@ -1,4 +1,6 @@
+import Link from "next/link";
 import React from "react";
+import { v4 as uuidv4 } from "uuid";
 
 const TableComp = ({ pokemons }) => {
   console.log(pokemons.results);
@@ -17,20 +19,33 @@ const TableComp = ({ pokemons }) => {
               <th scope="col" class="px-6 py-3">
                 Image
               </th>
+              <th scope="col" class="px-6 py-3">
+                More details
+              </th>
             </tr>
           </thead>
           {pokemons.results.map((currPokemon, index) => {
+            const PokemonId = uuidv4();
+
             return (
-              <tbody key={index}>
-                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+              <tbody>
+                <tr
+                  key={index + 1}
+                  class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+                >
                   <td
                     scope="row"
                     class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                   >
                     {index + 1}
                   </td>
-                  <td class="px-6 py-4">{currPokemon.name}</td>
-                  <td class="px-6 py-4">{currPokemon.url}</td>
+                  <td class="px-6 py-4 font-medium">{currPokemon.name}</td>
+                  <td class="px-6 py-4 font-medium">
+                    <img src={currPokemon.url} alt={currPokemon.name} />
+                  </td>
+                  <td class="px-6 py-4 font-medium">
+                    <Link href={`../PokemonPage/${currPokemon.name}`}>→</Link>
+                  </td>
                 </tr>
               </tbody>
             );

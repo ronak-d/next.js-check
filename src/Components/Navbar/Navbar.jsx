@@ -22,7 +22,7 @@ const Navbar = () => {
           </ul>
           <ul className="px-5">
             <li className=" font-bold">
-              <Link href="/pokemon">Pokemons</Link>
+              <Link href="../PokemonPage/pokemon">Pokemons</Link>
             </li>
           </ul>
         </div>
