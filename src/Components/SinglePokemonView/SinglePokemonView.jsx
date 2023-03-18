@@ -38,7 +38,7 @@ const SinglePokemonView = ({ SinglepokemonData }) => {
           {/* Versions */}
           <div class="mt-3">
             <div class="text-2xl font-extrabold">Versions</div>
-            <div class="flex">
+            <div class="flex overflow-x-auto">
               {SinglepokemonData.types.map((e) => {
                 return (
                   <div class=" bg-pink-100 text-pink-800 text-xs font-medium mt-3 mr-4 px-3 py-1.5 rounded dark:bg-pink-900 dark:text-xs dark:font-bold	 dark:text-pink-300 ">
@@ -53,7 +53,7 @@ const SinglePokemonView = ({ SinglepokemonData }) => {
         <div class="flex-1 px-4 lg:p-4">
           {/* abilities */}
           <div class="text-2xl font-extrabold">Abilities</div>
-          <div class="flex sm:flex-row md:flex-row">
+          <div class="overflow-x-auto flex sm:flex-row md:flex-row">
             {SinglepokemonData.abilities.map((e, index) => {
               return (
                 <div
@@ -68,12 +68,12 @@ const SinglePokemonView = ({ SinglepokemonData }) => {
           {/* moves */}
           <div class="Moves">
             <div class="text-2xl font-extrabold">Moves</div>
-            <div class="flex sm:flex-row md:flex-row">
+            <div class="overflow-x-auto flex sm:flex-row md:flex-row">
               {SinglepokemonData.moves.slice(0, 5).map((e, index) => {
                 return (
                   <div
                     key={index}
-                    class="bg-pink-100 text-pink-800 text-xs font-medium my-3 mr-4 px-3 py-1.5 rounded dark:font-bold dark:bg-pink-900 dark:text-pink-300"
+                    class=" bg-pink-100 text-pink-800 text-xs font-medium my-3 mr-4 px-3 py-1.5 rounded dark:font-bold dark:bg-pink-900 dark:text-pink-300"
                   >
                     {e.move.name}
                   </div>
@@ -91,7 +91,7 @@ const SinglePokemonView = ({ SinglepokemonData }) => {
                 // }
                 return (
                   <div>
-                    <div class="text-base font-medium my-2 mx-0.5">
+                    <div class="text-base font-medium my-3 mx-0.5">
                       {e.stat.name}
                     </div>
                     <div

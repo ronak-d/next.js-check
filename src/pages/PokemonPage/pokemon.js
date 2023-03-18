@@ -19,7 +19,7 @@ export default Pokemon;
 
 export async function getStaticProps() {
   // const res = await axios.get("https://pokeapi.co/api/v2/ability/");
-  const res = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=20");
+  const res = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=5");
   const data = res.data;
   return {
     props: {
