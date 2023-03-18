@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const SinglePokemonView = ({ SinglepokemonData }) => {
@@ -7,9 +8,12 @@ const SinglePokemonView = ({ SinglepokemonData }) => {
     <>
       <div class="sm:flex sm:flex-col lg:flex-row border-solid border-2 border-yellow-200">
         {/* left */}
-        <div class="flex-1 p-4 border-solid border-2 border-black-200">
+        <div class="flex-1 p-4 border-solid border-2 border-sky-300">
           <div class="text-2xl font-extrabold">
             {SinglepokemonData.name.toUpperCase()}
+          </div>
+          <div class="">
+            <Image />
           </div>
         </div>
         {/* right */}
@@ -50,9 +54,9 @@ const SinglePokemonView = ({ SinglepokemonData }) => {
               <div class="text-2xl font-extrabold">Stats</div>
               <div class="sm:flex-col md:flex-col">
                 {SinglepokemonData.stats.map((e, index) => {
-                  {
-                    console.log(e.base_stat);
-                  }
+                  // {
+                  //   console.log(e.base_stat);
+                  // }
                   return (
                     <div>
                       <div class="text-base font-medium my-2 mx-0.5">
@@ -60,7 +64,7 @@ const SinglePokemonView = ({ SinglepokemonData }) => {
                       </div>
                       <div
                         key={index}
-                        class="w-1/3 bg-gray-200 rounded-full h-2.5 mb-4 dark:bg-gray-700"
+                        class="sm:w-2/3 md:w-2/3 lg:w-2/3 bg-gray-200 rounded-full h-2.5 mb-4 dark:bg-gray-700"
                       >
                         <div
                           key={index}
