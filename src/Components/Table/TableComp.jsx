@@ -5,20 +5,6 @@ import PageComp from "../Pagination/PageComp";
 import SearchComp from "../Searchbar/SearchComp";
 
 const TableComp = ({ pokemons }) => {
-  // PAGINATION THINGS
-  const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 10;
-
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
-  const currentItems = pokemons.results.slice(startIndex, endIndex);
-
-  const totalPages = Math.ceil(pokemons.results.length / itemsPerPage);
-
-  const handlePageChange = (pageNumber) => {
-    setCurrentPage(pageNumber);
-  };
-
   // SEARCH BAR THINGS-
   const [results, setResults] = useState("");
 
@@ -30,6 +16,20 @@ const TableComp = ({ pokemons }) => {
   console.log(filteredPokemons);
   const handleSearch = (e) => {
     setResults(e.target.value);
+  };
+
+  // PAGINATION THINGS
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 10;
+
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const currentItems = filteredPokemons.slice(startIndex, endIndex);
+
+  const totalPages = Math.ceil(filteredPokemons.length / itemsPerPage);
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
   };
 
   return (
@@ -51,7 +51,8 @@ const TableComp = ({ pokemons }) => {
               </th>
             </tr>
           </thead>
-          {filteredPokemons.map((currPokemon, index) => {
+
+          {currentItems.map((currPokemon, index) => {
             const PokemonId = uuidv4();
             return (
               <tbody>
