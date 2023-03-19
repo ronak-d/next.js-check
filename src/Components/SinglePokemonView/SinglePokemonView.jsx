@@ -14,13 +14,12 @@ const SinglePokemonView = ({ SinglepokemonData }) => {
           <div class="text-2xl font-extrabold">
             {SinglepokemonData.name.toUpperCase()}
           </div>
-          <div class="my-3 text-center justify-center align-center border-solid border-2 border-yellow-200">
+          <div class="my-5">
             <Image
-              src={
-                "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/17.png"
-              }
-              height={250}
-              width={500}
+              class="border-solid border-2 border-white-200 "
+              src={SinglepokemonData.sprites.front_shiny}
+              height={200}
+              width={280}
               alt="Pokemon front default image"
               priority
             />

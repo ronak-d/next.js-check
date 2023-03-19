@@ -1,4 +1,3 @@
-import PageComp from "@/Components/Pagination/PageComp";
 import SearchComp from "@/Components/Searchbar/SearchComp";
 import TableComp from "@/Components/Table/TableComp";
 import React, { useState } from "react";
@@ -19,7 +18,7 @@ export default Pokemon;
 
 export async function getStaticProps() {
   // const res = await axios.get("https://pokeapi.co/api/v2/ability/");
-  const res = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=5");
+  const res = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=100");
   const data = res.data;
   return {
     props: {
