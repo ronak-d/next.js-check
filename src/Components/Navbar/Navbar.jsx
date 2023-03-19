@@ -9,7 +9,7 @@ const Navbar = () => {
         <div className="flex-1 items-center	">
           <ul className="px-5">
             <li className=" font-bold">
-              <Link href="../pokemon">Next.js</Link>
+              <Link href="../">Next.js</Link>
             </li>
           </ul>
         </div>
@@ -17,7 +17,7 @@ const Navbar = () => {
         <div className="flex">
           <ul className="px-5">
             <li className=" font-bold">
-              <Link href="../pokemon">Pokemons</Link>
+              <Link href="../">Pokemons</Link>
             </li>
           </ul>
         </div>
