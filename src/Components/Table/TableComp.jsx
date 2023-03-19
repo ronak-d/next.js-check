@@ -55,7 +55,7 @@ const TableComp = ({ pokemons }) => {
           {currentItems.map((currPokemon, index) => {
             const PokemonId = uuidv4();
             return (
-              <tbody>
+              <tbody key={index}>
                 <tr
                   key={index + 1}
                   className="bg-white border-b my-3 dark:bg-gray-800 dark:border-gray-700"

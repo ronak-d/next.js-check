@@ -42,9 +42,12 @@ const SinglePokemonView = ({ SinglepokemonData }) => {
           <div className="mt-3">
             <div className="text-2xl font-extrabold">Versions</div>
             <div className="flex overflow-x-auto">
-              {SinglepokemonData.types.map((e) => {
+              {SinglepokemonData.types.map((e, index) => {
                 return (
-                  <div className=" bg-pink-100 text-pink-800 text-xs font-medium mt-3 mr-4 px-3 py-1.5 rounded dark:bg-pink-900 dark:text-xs dark:font-bold	 dark:text-pink-300 ">
+                  <div
+                    key={index}
+                    className=" bg-pink-100 text-pink-800 text-xs font-medium mt-3 mr-4 px-3 py-1.5 rounded dark:bg-pink-900 dark:text-xs dark:font-bold	 dark:text-pink-300 "
+                  >
                     {e.type.name}
                   </div>
                 );
@@ -93,7 +96,7 @@ const SinglePokemonView = ({ SinglepokemonData }) => {
                 //   console.log(e.base_stat);
                 // }
                 return (
-                  <div>
+                  <div key={index}>
                     <div className="text-base font-medium my-3 mx-0.5">
                       {e.stat.name}
                     </div>
