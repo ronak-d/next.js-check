@@ -51,37 +51,33 @@ const TableComp = ({ pokemons }) => {
               </th>
             </tr>
           </thead>
-          {filteredPokemons.length > 0
-            ? filteredPokemons
-            : currentItems.map((currPokemon, index) => {
-                const PokemonId = uuidv4();
-                return (
-                  <tbody>
-                    <tr
-                      key={index + 1}
-                      className="bg-white border-b my-3 dark:bg-gray-800 dark:border-gray-700"
-                    >
-                      <td
-                        scope="row"
-                        className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                      >
-                        {index + 1}
-                      </td>
-                      <td className="px-6 py-4 font-medium">
-                        {/* capitalizing first letter and adding remaining letters */}
-                        {currPokemon.name.charAt(0).toUpperCase() +
-                          currPokemon.name.slice(1)}
-                      </td>
+          {filteredPokemons.map((currPokemon, index) => {
+            const PokemonId = uuidv4();
+            return (
+              <tbody>
+                <tr
+                  key={index + 1}
+                  className="bg-white border-b my-3 dark:bg-gray-800 dark:border-gray-700"
+                >
+                  <td
+                    scope="row"
+                    className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                  >
+                    {index + 1}
+                  </td>
+                  <td className="px-6 py-4 font-medium">
+                    {/* capitalizing first letter and adding remaining letters */}
+                    {currPokemon.name.charAt(0).toUpperCase() +
+                      currPokemon.name.slice(1)}
+                  </td>
 
-                      <td className="px-6 py-4 font-medium">
-                        <Link href={`../PokemonPage/${currPokemon.name}`}>
-                          ➡️
-                        </Link>
-                      </td>
-                    </tr>
-                  </tbody>
-                );
-              })}
+                  <td className="px-6 py-4 font-medium">
+                    <Link href={`../PokemonPage/${currPokemon.name}`}>➡️</Link>
+                  </td>
+                </tr>
+              </tbody>
+            );
+          })}
         </table>
       </div>
 
