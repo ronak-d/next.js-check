@@ -20,7 +20,7 @@ export default Pokemonid;
 
 // making the specific paths static
 export async function getStaticPaths() {
-  const res = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=20");
+  const res = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=100");
   const data = res.data;
 
   const paths = data.results.map((currentPokem) => {

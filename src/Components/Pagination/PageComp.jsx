@@ -10,13 +10,13 @@ const PageComp = ({ handlePageChange, totalPages, currentPage }) => {
 
   return (
     <div>
-      <div class="items-center m-10">
-        <ul class="inline-flex items-center -space-x-px">
+      <div className="border-solid border-2 border-violet-600 sm:flex sm:place-content-around ">
+        <ul className="flex text-center	 m-10">
           {pageNumbers.map((pageNumber) => (
             <li
               key={pageNumber}
               onClick={() => handlePageChange(pageNumber)}
-              class="px-3 py-2 leading-tight text-gray-500 bg-white border
+              className="px-3 py-2 leading-tight text-gray-500 bg-white border
               border-gray-300 hover:bg-gray-100 hover:text-gray-700
               dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400
               dark:hover:bg-gray-700 dark:hover:text-white"
@@ -24,6 +24,9 @@ const PageComp = ({ handlePageChange, totalPages, currentPage }) => {
               {pageNumber}
             </li>
           ))}
+        </ul>
+        <ul className="m-10">
+          <li className="font-bold ">{`Current Page: ${currentPage}`}</li>
         </ul>
       </div>
     </div>

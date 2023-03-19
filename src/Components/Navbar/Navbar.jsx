@@ -5,11 +5,11 @@ const Navbar = () => {
   return (
     <>
       {/* border-solid border-2 border-sky-500 */}
-      <div className="shadow-md pt-5 pb-5 p-2 flex container mx-auto ">
+      <div className="shadow-lg pt-5 pb-5 p-2 flex container mx-auto ">
         <div className="flex-1 items-center	">
           <ul className="px-5">
             <li className=" font-bold">
-              <Link href="/index">Next.js</Link>
+              <Link href="../pokemon">Next.js</Link>
             </li>
           </ul>
         </div>
@@ -17,12 +17,7 @@ const Navbar = () => {
         <div className="flex">
           <ul className="px-5">
             <li className=" font-bold">
-              <Link href="/">Home</Link>
-            </li>
-          </ul>
-          <ul className="px-5">
-            <li className=" font-bold">
-              <Link href="../PokemonPage/pokemon">Pokemons</Link>
+              <Link href="../pokemon">Pokemons</Link>
             </li>
           </ul>
         </div>
