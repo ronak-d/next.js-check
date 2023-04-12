@@ -1,4 +1,4 @@
-##Pokemon web app shows the information about the specific Pokemon.
+## Pokemon web app shows the information about the specific Pokemon.
 
 #Tech stack were
 
